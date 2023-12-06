@@ -1,0 +1,15 @@
+{{#if posts.length}}
+  <div>
+    {{#each posts as |post|}}
+    <div>
+      <div>
+        <h4><a href="/userpost/{{post.id}}">{{post.title}}</a></h4>
+        <p>{{format_date post.date_created}}</p>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+{{/if}}
+
+<a href="/newpost">+ New Post</a>
+
