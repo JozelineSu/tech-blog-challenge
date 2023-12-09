@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -48,6 +48,23 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
+router.post('/post/:id/comments', async (req, res) => {
+  try {
+    await Comment.create({
+      ...req.body,
+      user_id: req.session.user_id,
+      post_id: req.params.id
+    });
+
+    // Redirect the user back to the post after adding the comment
+    res.redirect(`/post/${req.params.id}`);
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 // Use withAuth middleware to prevent access to route
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
@@ -77,5 +94,17 @@ router.get('/login', (req, res) => {
   
     res.render('login');
 });
+
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+
+  res.render('signup');
+});
+
+
 
 module.exports = router;

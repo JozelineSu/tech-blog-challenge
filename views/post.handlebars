@@ -5,7 +5,8 @@
         <p>{{content}}</p>
     </div>
     <div>
-        <form>
+        <form action="/post/{{id}}/comments" method="POST">
+            <!-- Your form fields -->
             <div>
                 <label for="comment">Comment:</label>
                 <input class="form-input" type="text" id="comment" name="comment" />
@@ -16,3 +17,6 @@
         </form>
     </div>
 </div>
+
+
+<script src="./js/post.js"></script>
