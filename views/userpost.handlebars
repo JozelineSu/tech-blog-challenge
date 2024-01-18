@@ -1,9 +1,16 @@
 <div class="text-center">
-  <h2>Edit Post</h2>
-  <p>{{{title}}}</p>
-  <p>{{content}}</p>
-  <p>
-    <button>Update Post</button>
-    <button>Delete</button>
-  </p>
+  <form class="edit-post-form">
+    <div>
+      <input name="post-title" id="post-title" type="text" value="{{title}}"/>
+    </div>
+    <div>
+      <textarea name="post-content" id="post-content">{{content}}</textarea>
+    </div>
+
+    <button type="submit">Update Post</button>
+    <button type="button" class="delete-post-btn">Delete</button>    
+  </form>
+
 </div>
+
+<script src="/js/userpost.js"></script>
