@@ -8,7 +8,6 @@ header, .project:not(:last-child) {
     background-color: black;
     padding-left: 20px;
     padding-top: 15px;
-
 }
 
 h1 a,
@@ -17,19 +16,7 @@ h4 a {
     background-color: rgb(214, 235, 202);
 }
 
-nav a {
-    margin: 15px;
-}
-
-#logout {
-    flex: none;
-}
-
-a, .title{
-    text-decoration: none;
-    color: rgb(214, 235, 202); 
-}
-
+/* Styling for most div containers*/
 .title {
     background-color: black;
     padding: 5px;
@@ -43,13 +30,17 @@ a, .title{
     margin: 15px;
 }
 
-.user-post {
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* NavBar*/
+nav a {
+    margin: 15px;
 }
 
+a, .title{
+    text-decoration: none;
+    color: rgb(214, 235, 202); 
+}
+
+/* Form */
 label, input, .form-group button, textarea {
     display: block;
     width: 100%;
@@ -62,11 +53,16 @@ label, input, .form-group button, textarea {
     color: white;
 }
 
-.delete-post-btn {
-    margin-top: 8px;
-}
 .form-group {
     padding: 10px;
+}
+
+/* Dashboard Page*/
+.user-post {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .newpost {
@@ -80,22 +76,14 @@ label, input, .form-group button, textarea {
     width: 100px;
 }
 
+/* User Post Page*/
+.delete-post-btn {
+    margin-top: 8px;
+}
+
+/* Post Page*/
 .comment {
     height: 25px;
-}
-.no-button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    color: #1b89bc;
-    text-decoration: none;
-    font-size: 100%;
-}
-  
-.no-button:hover {
-    color: #065b83;
-    text-decoration: underline;
 }
 
 
