@@ -1,14 +1,16 @@
-<div class="text-center">
+<div class="container">
+  <h3 class="title">Edit Post</h3>
   <form class="edit-post-form">
-    <div>
+    <div class="form-group">
       <input name="post-title" id="post-title" type="text" value="{{title}}"/>
     </div>
-    <div>
+    <div class="form-group">
       <textarea name="post-content" id="post-content">{{content}}</textarea>
     </div>
-
-    <button type="submit">Update Post</button>
-    <button type="button" class="delete-post-btn">Delete</button>    
+    <div class="form-group">
+      <button type="submit">Update Post</button>
+      <button type="button" class="delete-post-btn">Delete</button>    
+    </div>
   </form>
 
 </div>

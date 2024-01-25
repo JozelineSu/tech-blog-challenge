@@ -1,8 +1,10 @@
+<div class="dashboard">
+
 {{#if posts.length}}
   <div>
     {{#each posts as |post|}}
     <div>
-      <div>
+      <div class="container user-post">
         <h4><a href="/dashboard/userpost/{{post.id}}">{{post.title}}</a></h4>
         <p>{{format_date post.date_created}}</p>
       </div>
@@ -11,5 +13,8 @@
   </div>
 {{/if}}
 
-<a href="/dashboard/newpost">+ New Post</a>
+<div class="newpost">
+ <a  href="/dashboard/newpost">+ New Post</a> 
+</div>
+</div>
 
